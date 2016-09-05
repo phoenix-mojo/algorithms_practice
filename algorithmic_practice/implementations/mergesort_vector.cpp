@@ -34,14 +34,12 @@ vector<int> mergeSplits(vector<int>& left, vector<int>& right) {
 	return resultVector;
 }
 
-vector<int> mergeSort(vector<int>& myVector) {
+vector<int>& mergeSort(vector<int>& myVector) {
 	if(myVector.size()<=1)
 		return myVector;
 	vector<int>leftVector (myVector.begin(), myVector.begin()+(myVector.size()/2));
 	vector<int>rightVector (myVector.begin()+(myVector.size()/2), myVector.end());
-	leftVector = mergeSort(leftVector);
-	rightVector = mergeSort(rightVector);
-	myVector = mergeSplits(leftVector, rightVector);
+	myVector = mergeSplits(mergeSort(leftVector), mergeSort(rightVector));
 	return myVector;
 }	
 
