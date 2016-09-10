@@ -11,7 +11,7 @@ int binarySearch(vector<int>& myVector, int left, int right, int searchElement) 
 		if(myVector[mid] == searchElement)
 			return mid;
 		else if(myVector[mid]>searchElement)
-			return(binarySearch(myVector, left, mid, searchElement));
+			return(binarySearch(myVector, left, mid-1, searchElement));
 		else
 			return(binarySearch(myVector, mid+1, right, searchElement));
 	}
