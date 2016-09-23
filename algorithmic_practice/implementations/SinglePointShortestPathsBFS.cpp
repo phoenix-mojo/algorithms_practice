@@ -33,11 +33,11 @@ void printParents(vector<int>& parent) {
 		cout<<"Vertex("<<i<<")->Parent: "<<parent[i]<<endl;
 }
 
-void BFS(map<int, vector<int> >& AdjacencyList, int root) {
+void BFS(map<int, vector<int> >& AdjacencyList, int root, int vertexCount) {
 	queue<int> BFSqueue;
-	vector<bool> visited(AdjacencyList.size(), false);
-	vector<int> distance(AdjacencyList.size(), INT_MAX);
-	vector<int> parent(AdjacencyList.size(), -1);
+	vector<bool> visited(vertexCount, false);
+	vector<int> distance(vertexCount, INT_MAX);
+	vector<int> parent(vertexCount, -1);
 	BFSqueue.push(root);
 	visited[root] = true;
 	distance[root] = 0;
@@ -61,7 +61,9 @@ void BFS(map<int, vector<int> >& AdjacencyList, int root) {
 	cout<<"-------------------------------\n";
 }
 int main() {
-	int edgeCount;
+	int edgeCount, vertexCount;
+	cout<<"Enter the number of vertices: ";
+	cin>>vertexCount;
 	cout<<"Enter the number of edges: ";
 	cin>>edgeCount;
 	if(edgeCount) {
@@ -78,7 +80,7 @@ int main() {
 		for(map<int, vector<int> >::iterator it = AdjacencyList.begin(); it != AdjacencyList.end(); it++) { 
 			cout<<"-------------------------------\n";
 			cout<<"BFS("<<it->first<<") :";
-			BFS(AdjacencyList, it->first);
+			BFS(AdjacencyList, it->first, vertexCount);
 			cout<<endl;
 		}
 
