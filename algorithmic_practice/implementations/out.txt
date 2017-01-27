@@ -1,0 +1,87 @@
+PreOrder()
+1 2 4 8 9 5 3 6 7 
+Inorder()
+9 8 4 2 5 1 6 3 7 
+PostOrder()
+9 8 4 5 2 6 7 3 1 
+Level(1)
+1 
+Level(2)
+2 3 
+Level(3)
+4 5 6 7 
+levelOrder()
+1 2 3 4 5 6 7 8 9 
+levelOrderLineByLine()
+1 
+2 3 
+4 5 6 7 
+8 
+9 
+
+inOrderWithoutRecursion()
+9 8 4 2 5 1 6 3 7 
+preOrderWithoutRecursion()
+1 2 4 8 9 5 3 6 7 
+postOrderWithoutRecursionTwoStacks()
+9 8 4 5 2 6 7 3 1 
+TreeHeight
+5
+TreeSize
+9
+IdenticalTrees()
+true
+IdenticalTrees()
+true
+IdenticalTrees()
+false
+DeleteTree()
+
+DeleteTree()
+
+generateTreeFromInOrderAndPostOrder()
+9 0 8 1
+8 0 8 1
+4 0 8 1
+2 0 8 1
+5 0 8 1
+1 0 8 1
+6 6 8 3
+3 6 8 3
+9 0 4 2
+8 0 4 2
+4 0 4 2
+2 0 4 2
+9 0 2 4
+8 0 2 4
+4 0 2 4
+9 0 1 8
+8 0 1 8
+
+preOrder()
+1 2 4 8 9 5 3 6 7 
+IdenticalTrees()
+true
+generateTreeFromInOrderAndPreOrder()
+9 0 8 1
+8 0 8 1
+4 0 8 1
+2 0 8 1
+5 0 8 1
+1 0 8 1
+9 0 4 2
+8 0 4 2
+4 0 4 2
+2 0 4 2
+9 0 2 4
+8 0 2 4
+4 0 2 4
+9 0 1 8
+8 0 1 8
+6 6 8 3
+3 6 8 3
+
+postOrder()
+9 8 4 5 2 6 7 3 1 
+IdenticalTrees()
+true
